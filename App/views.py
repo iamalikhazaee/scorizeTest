@@ -8,4 +8,4 @@ from .models import *
 
 class UniversityViewSet(viewsets.ModelViewSet):
     queryset = University.objects.all()
-    serializer_class = UniversitySerializer
+    serializer_class = UniversityListSerializer

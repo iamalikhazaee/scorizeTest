@@ -12,7 +12,7 @@ class citySerializer(serializers.ModelSerializer):
           model = City
           fields = ["city", "country"]
 
-class UniversitySerializer(serializers.ModelSerializer):
+class UniversityListSerializer(serializers.ModelSerializer):
      city = citySerializer()
 
      class Meta:
