@@ -2,11 +2,11 @@ from django.shortcuts import render
 
 # Create your views here.
 from rest_framework import viewsets
-from rest_framework.pagination import PageNumberPagination
+from rest_framework import pagination
 from .serializer import *
 from .models import *
 
-from rest_framework import pagination
+
 
 class ExamplePagination(pagination.PageNumberPagination):
        page_size = 10
