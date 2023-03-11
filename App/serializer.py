@@ -14,7 +14,12 @@ class citySerializer(serializers.ModelSerializer):
 
 class UniversityListSerializer(serializers.ModelSerializer):
      city = citySerializer()
-
      class Meta:
           model = University
           fields = ["id", "name", "city", "established_year"]
+
+class UniversityDetailSerializer(serializers.ModelSerializer):
+     city = citySerializer()
+     class Meta:
+          model = University
+          fields = "__all__"
