@@ -21,11 +21,11 @@ class University(models.Model):
     acronym = models.CharField(max_length=10, null=True)
     logo = models.ImageField(upload_to=None, null=True)
     type = models.CharField(max_length=50, null=True)
-    overview = models.TextField(blank=True)
-    established_year = models.DateTimeField(null=False)
+    overview = models.TextField(blank=True, null=True)
+    established_year = models.CharField(max_length=10)
     total_std = models.CharField(max_length=225)
     international_std = models.CharField(max_length=225)
-    website = models.CharField(max_length=225)
+    website = models.CharField(max_length=225, null=True)
     apply_rate = models.CharField(max_length=10)
 
     def __str__(self):
