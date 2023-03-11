@@ -20,3 +20,7 @@ class UniversityListViewSet(viewsets.ModelViewSet):
     queryset = University.objects.all()
     serializer_class = UniversityListSerializer
     pagination_class = ExamplePagination
+
+class UniversityDetailsViewSet(viewsets.ModelViewSet):
+    queryset = University.objects.order_by("apply_rate").reverse()
+    serializer_class = UniversityDetailSerializer
