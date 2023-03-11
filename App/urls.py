@@ -5,7 +5,7 @@ from .views import *
 
 
 router = DefaultRouter()
-router.register(r'university', UniversityViewSet)
+router.register(r'universityList', UniversityViewSet)
 
 urlpatterns = [
     path('', include(router.urls))
