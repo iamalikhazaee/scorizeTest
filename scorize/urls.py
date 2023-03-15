@@ -19,5 +19,6 @@ from App import urls as app_url
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('core/', include(app_url))
+    path('core/', include(app_url)),
+    path('__debug__/', include('debug_toolbar.urls')),
 ]
